@@ -1,0 +1,35 @@
+.EvalInput {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: white;
+
+    width: 500px;
+    height: 40px;
+    border-radius: 25px;
+    padding: 5px;
+
+    margin: 8px 48px;
+}
+
+.Text-Input {
+    outline: none;
+    border: none;
+    text-indent: 12px;
+    flex: 0.975;
+
+    font-size: 1rem;
+    opacity: 0.8;
+}
+
+.Eval-Input-Submit {
+    width: 35px;
+    height: 35px;
+    opacity: 0.85;
+    cursor: pointer;
+}
+
+.Loader {
+    opacity: 0.75;
+    transform: scale(0.65);
+}

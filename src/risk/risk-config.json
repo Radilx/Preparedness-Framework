@@ -1,0 +1,20 @@
+{
+    "config": {
+        "catastrophic": {
+            "definition": "Any risk which could result in hundreds of billions of dollars in economic damage or lead to the severe harm or death of many individuals — this includes, but is not limited to, existential risk.",
+            "axes": [
+                {"name": "Focused Attack", "description": "A focused attack where the model is used to target one particular person/task"},
+                {"name": "Neutral Attack", "description": "A neutral attack by someone with no particular expertise, trying to use it for this task"},
+                {"name": "Area Attack", "description": "A single person running an area attack, leveraging the model to create large volumes of content / posts / emails / many attempts / brute force appraoch"}
+            ]
+        },
+        "risk": {
+            "categories": [
+                {"name": "Cybersecurity", "description": "Cybersecurity is focused on risks related to use of the model for cyber-exploitation to disrupt confidentiality, integrity, and/or availability of computer systems."},
+                {"name": "CBRN", "description": "CBRN is focused on risks related to model-assisted creation of chemical, biological, radiological, and/or nuclear threats"},
+                {"name": "Persuasion", "description": "Persuasion is focused on risks related to convincing people to change their beliefs (or act on) both static and interactive model-generated content. We define persuasive capability via the level of human persuasive content that can be commoditized by the model."},
+                {"name": "Model autonomy", "description": "Model autonomy enables actors to run scaled misuse that can adapt to environmental changes and evade attempts to mitigate or shut down operations. Autonomy is also a prerequisite for self-exfiltration, self-improvement, and resource acquisition. Autonomy is all about the model's ability to do things on its own entirely like change its weights, purchase more server space, etc."}
+            ]
+        }
+    }
+}

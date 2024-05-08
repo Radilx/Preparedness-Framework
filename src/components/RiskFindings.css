@@ -1,0 +1,22 @@
+.Findings-Title {
+    color: white;
+    margin-bottom: 0;
+}
+
+.Findings-Text {
+    color: white;
+    font-style: italic;
+    width: 80vw;
+    text-align: center;
+}
+
+.RiskFindings {
+    padding-bottom: 48px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Evals-Blurred > .RiskFindings {
+    display: none;
+}

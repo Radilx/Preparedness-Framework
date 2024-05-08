@@ -1,0 +1,14 @@
+.Evals {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    margin-top: 36px;
+}
+
+.Evals-Blurred {
+    filter: blur(10px);
+    opacity: 0.5;
+}
