@@ -8,8 +8,6 @@ import Border from './components/Border';
 
 import { useEffect, useState } from 'react';
 
-import { risk } from './risk/risk-assessment';
-
 function App() {
 
   const [jailbreak, setJailbreak] = useState();
@@ -17,13 +15,16 @@ function App() {
   const [riskAssessment, setRiskAssessment] = useState(null)
 
   const updateRisk = async function(){
-    let data = await risk(jailbreak);
-    data = JSON.parse(data);
-
-    console.log(data);
-    
-    setRiskAssessment(data);
-    setLoading(false);
+    fetch(`${process.env.REACT_APP_BASE_URL}/risk`, {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({
+        jailbreak: jailbreak
+      })
+    }).then(res => res.json()).then(data => {
+      setRiskAssessment(JSON.parse(data[0]));
+      setLoading(false);
+    });
   }
 
   useEffect(() => {

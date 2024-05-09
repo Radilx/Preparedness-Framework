@@ -3,7 +3,7 @@ const { catastrophicPrompts } = require("./risk-prompts");
 
 const run = async (systemPrompt, userPrompt) => { 
     const openai = new OpenAI({
-        apiKey: process.env.API_KEY,
+        apiKey: process.env.OPENAI_API_KEY,
         dangerouslyAllowBrowser: true
     });
 
@@ -23,8 +23,10 @@ const getCatastrophicAssessments = async function(jailbreak) {
     return result;
 }
 
-export const risk = async function(jailbreak) {
+const risk = async function(jailbreak) {
     return await Promise.all([
         getCatastrophicAssessments(jailbreak)
     ])
 }
+
+module.exports = {risk}
